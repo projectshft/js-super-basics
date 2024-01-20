@@ -25,6 +25,7 @@ const getRandomMessage = (messages) =>
 
 async function runTests() {
 	const ora = (await import('ora')).default;
+	const chalk = (await import('chalk')).default;
 	fs.readdirSync(lessonPath).forEach((file) => {
 		if (
 			file.endsWith('.js') &&
@@ -37,7 +38,9 @@ async function runTests() {
 			);
 			if (!content.includes('REMOVE THIS LINE to check your work')) {
 				const testName = file.replace('.js', '.test.js');
-				const spinner = ora(`🤖 Running test for ${file}`).start();
+				const spinner = ora(
+					`🤖 ${chalk.blue('Running test for')} ${chalk.yellow(file)}`
+				).start();
 
 				exec(
 					`npm test -- ${path.join(testPath, testName)}`,
@@ -45,18 +48,28 @@ async function runTests() {
 						spinner.stop();
 						if (error) {
 							console.error(
-								`Error running test for ${file}: ${error}`
+								chalk.red(
+									`Error running test for ${file}: ${error}`
+								)
 							);
-							console.log(getRandomMessage(errorMessages)); // Display a random error message
+							console.log(
+								chalk.bgRed(getRandomMessage(errorMessages))
+							); // Display a random error message with background color
 							return;
 						}
-						console.log(`Results for ${file}:\n${stdout}`);
+						console.log(
+							chalk.green(`Results for ${file}:\n${stdout}`)
+						);
 						if (stderr) {
 							console.error(
-								`Error output for ${file}:\n${stderr}`
-							);
+								chalk.bgYellow(
+									`Error output for ${file}:\n${stderr}`
+								)
+							); // Yellow background for stderr
 						} else {
-							console.log(getRandomMessage(successMessages)); // Display a random success message
+							console.log(
+								chalk.bgGreen(getRandomMessage(successMessages))
+							); // Display a random success message with background color
 						}
 					}
 				);

@@ -32,6 +32,10 @@ const earthGravity = 9.8; // Correct Usage
 // Below, 'pi' should be a constant.
 let pi = 3.14; // TODO: Change this line to correctly declare 'pi' as a constant.
 
+// to see the error ❌ uncomment the line below
+// pi = 3.14159;
+// now comment the line above again ✅
+
 // CHALLENGE 2: Correct the data type
 // The 'age' variable should be a number, not a string.
 let age = '30'; // TODO: Fix the data type of 'age'.
@@ -40,11 +44,9 @@ let age = '30'; // TODO: Fix the data type of 'age'.
 // You need to declare a variable named 'greeting' that holds the string "Hello, JavaScript!".
 // TODO: Declare the 'greeting' variable and assign the correct string to it.
 
-const greeting = 'Hello, JavaScript!';
-
 console.log(pi);
 console.log(age);
-console.log(greeting);
+// console.log(greeting);
 
 module.exports = {
 	pi,
