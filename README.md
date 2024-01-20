@@ -4,6 +4,10 @@ Welcome to the JavaScript Basics Learning Project! This repository is designed t
 
 ## Setting Up the Project
 
+Watch this if you want to see how I've done this
+
+https://share.descript.com/view/a2pqYW8i66j?transcript=false
+
 ### Prerequisites
 
 -   Ensure you have [Node.js](https://nodejs.org/) installed on your system. This will include npm (Node Package Manager), which is used to manage dependencies and run scripts.
@@ -16,7 +20,7 @@ Welcome to the JavaScript Basics Learning Project! This repository is designed t
     ```
 2. Navigate into the project directory:
     ```bash
-    cd js-basics-learn
+    cd js-super-basics
     ```
 
 ### Installing Dependencies
