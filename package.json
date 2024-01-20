@@ -1,0 +1,22 @@
+{
+	"name": "js-basics-learn",
+	"version": "1.0.0",
+	"description": "",
+	"main": "01_HelloWorld.js",
+	"scripts": {
+		"test": "jest",
+		"check-tests": "node checkTests.js",
+		"watch": "node checkTests.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"jest": "^29.7.0"
+	},
+	"dependencies": {
+		"chokidar": "^3.5.3",
+		"execa": "^8.0.1",
+		"ora": "^8.0.1"
+	}
+}
