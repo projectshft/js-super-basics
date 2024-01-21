@@ -46,7 +46,7 @@ let age = '30'; // TODO: Fix the data type of 'age'.
 
 console.log(pi);
 console.log(age);
-// console.log(greeting);
+console.log(greeting);
 
 module.exports = {
 	pi,
